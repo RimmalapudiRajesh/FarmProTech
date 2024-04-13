@@ -1,2 +1,1 @@
-# FarmProTech
- 
+# CropIQ

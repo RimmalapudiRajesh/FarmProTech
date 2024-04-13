@@ -1,0 +1,231 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="CropRecommendation.html">Crop</a></li>
+<li><a href="FertilizerRecommendation.html">Fertilizer</a></li>
+<li><a href="PesticideRecommendation.html">Pesticide</a></li>
+{% endblock %}
+
+{% block body %}
+<section class="tm-welcome-section light-gray-bg">
+    <div class="container tm-position-relative">
+      
+      <div class="row tm-welcome-content">
+      
+        <div style="padding-left: 235px; padding-bottom: 80px;">
+          <img src="{{ url_for('static', filename='img/crop-img.jpg') }}" alt="Light" class="light light-1" style="border-radius: 50%;height:250px; width: 200px;">
+
+        </div>
+        
+        <h2 style="font-family: 'Times New Roman'" class=" tm-welcome-header">
+         Welcome To</h2>
+        <h2 class="gold-text tm-handwriting-font1 tm-welcome-header-2 typing-animation ">FarmProTech</h2>
+        <br>
+        <br>
+        <br>
+
+        <p style="font-family: 'Times New Roman';font-size: large" class="gray-text tm-welcome-description">In the realm of farming, the equation is complex: Farming equals Artificial Intelligence, 
+          Crop management, Fertilization, and Pest control. At SoilSavers, we are dedicated to preserving and enhancing the health of your soil. 
+          We deeply respect the dedication, hard work, and character of Indian farmers.These individuals are the lifeblood of a nation with a population
+          of nearly 1.4 billion. </p>
+          <br>
+          <p style="font-family: 'Times New Roman';font-size: large" class="gray-text tm-welcome-description">However, their efforts are constantly challenged by natural forces that threaten their crops and livelihoods.
+            SoilSavers is a humble initiative aimed at revolutionizing agriculture. We empower farmers to make informed decisions by considering field 
+            demographics, crop-affecting factors, and strategies for maintaining optimal crop health, leading to exceptional yields.</p>
+        <br><br><br>
+      </div>
+      <img src="{{ url_for('static', filename='img/table-set.png') }}" alt="Table Set" class="tm-table-set img-responsive" width="100%">
+    </div>
+  </section>
+  <div class="tm-main-section black-bg ">
+    <div class="container" id="main">
+      <section class="tm-section tm-section-margin-bottom-0 row">
+        <div class="col-lg-12 tm-section-header-container">
+          <div class="tm-hr-container" style="padding-right: 50px;">
+            <hr class="tm-hr">
+          </div>
+          <h2 class="tm-section-header gold-text "  style="padding-right: 10px;">Our Services</h2>
+          <div class="tm-hr-container">
+            <hr class="tm-hr">
+          </div>
+        </div>
+        <div class="col-lg-12 tm-popular-items-container">
+          <div class="tm-popular-item">
+            <img src="{{ url_for('static', filename='img/popular-1.jpeg') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+            <div class="tm-popular-item-description">
+              <h3 class="tm-handwriting-font tm-popular-item-title"><span
+                  class="tm-handwriting-font bigger-first-letter">P</span>esticide Recommendation</h3>
+              <hr class="tm-popular-item-hr">
+              <p style="font-family: 'Times New Roman';font-size: 17px">Pests are a big threat.
+                Use Irrigreat to know which pesticide to use to control pests before they cause potential damage to your
+                crop?</p>
+              <div class="order-now-container">
+                <a href="PesticideRecommendation.html" class="order-now-link tm-handwriting-font">Proceed Now</a>
+              </div>
+            </div>
+          </div>
+        <div class="tm-popular-item">
+          <img src="{{ url_for('static', filename='img/popular-3.jpg') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+          <div class="tm-popular-item-description">
+            <h3 class="tm-handwriting-font tm-popular-item-title"><span
+                class="tm-handwriting-font bigger-first-letter">F</span>ertilizer Recommendation</h3>
+            <hr class="tm-popular-item-hr">
+            <p style="font-family: 'Times New Roman';font-size: 17px">Which fertilizer to choose for the cultivated soil and prescribed crop for optimum production?
+            Provide your crops, the essential nutrients.</p>
+            <div class="order-now-container">
+              <a href="FertilizerRecommendation.html" class="order-now-link tm-handwriting-font">Proceed Now</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="tm-popular-item">
+          <img src="{{ url_for('static', filename='img/popular-2.jpg') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+          <div class="tm-popular-item-description">
+            <h3 class="tm-handwriting-font tm-popular-item-title"><span
+                class="tm-handwriting-font bigger-first-letter">C</span>rop Recommendation</h3>
+            <hr class="tm-popular-item-hr">
+            <p style="font-family: 'Times New Roman';font-size:17px">Which crop to grow, that is ideally suited to conditions?
+              Make an informed decision before starting the cultivation of crops.</p>
+            <div class="order-now-container">
+              <a href="CropRecommendation.html" class="order-now-link tm-handwriting-font">Proceed Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+  </div>
+  <section class='team-section' id="team-section">
+    <div class="container">
+        <div class="team-title">
+          <h2 class="gold-text" style="text-align: center;color: #c79c60; margin: 0px;font-family: 'Times New Roman'; font-size: 35px;">
+            <br>
+            <b class="typing-animation4">Our Team</b>
+          </h2>
+        </div>
+        <div class="team-cards">
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='img/rajesh.jpeg') }} " alt="Rajesh" />
+                </div>
+                <div class="team-details">
+                    <h3>Rajesh</h3>
+                    <p>20BQ1A4247</p>
+                    <div class="social-icons">
+                      <a href="https://www.linkedin.com/in/rajesh142" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/RimmalapudiRajesh" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='img/harsha.jpeg') }} " alt="Harsha" />
+                </div>
+                <div class="team-details">
+                    <h3>Harsha</h3>
+                    <p>20BQ1A4245</p>
+                    <div class="social-icons">
+                      <a href="https://www.linkedin.com/in/saisriharsha2005" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/saisriharsha2003" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='img/joseph.jpeg') }} " alt="Joseph" />
+                </div>
+                <div class="team-details">
+                    <h3>Joseph</h3>
+                    <p>20BQ1A4208</p>
+                    <div class="social-icons">
+                      <a href="https://www.linkedin.com/in/busi-joseph-37a64a20b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/busijoseph826" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='img/vara.jpeg') }} " alt="Vara" />
+                </div>
+                <div class="team-details">
+                    <h3>Varalakshmaiah</h3>
+                    <p>20BQ1A4217</p>
+                    <div class="social-icons">
+                      <a href="https://www.linkedin.com/in/varalakshmaiahduggineni" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/Varalakshmaiah28" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="tm-black-bg">
+      <div class="container">
+        <div class="row margin-bottom-60">
+          <nav class="col-lg-3 col-md-3 tm-footer-nav tm-footer-div">
+            <h3 class="tm-footer-div-title">Our Team</h3>
+            <ul style="font-family: 'Times New Roman';font-size: 14px">
+              <li>Rimmalapudi Rajesh</li>
+              <li>Rankela Sai Sri Harsha</li>
+              <li>Busi Joseph</li>
+              <li>Varalakshmiah Duggineni</li>
+
+            </ul>
+          </nav>
+          <div class="col-lg-5 col-md-5 tm-footer-div">
+            <h3 class="tm-footer-div-title">Few words for our Indian Farmers</h3>
+            <div class="footer-des">
+              <p  style="font-family: 'Times New Roman';font-size: large" class="margin-top-15" align="justify">Our Indian farmers are the silent heroes who work tirelessly to ensure that food reaches our tables every day. 
+                They face numerous challenges, from unpredictable weather conditions to fluctuating market prices, yet they continue to persevere with unwavering determination. </p>
+  
+               <p style="font-family: 'Times New Roman';font-size: large" class="margin-top-15" align="justify"> Despite their crucial role, farmers often struggle with issues like inadequate access to modern technology, lack of proper irrigation facilities, and limited financial support. 
+                These challenges can make farming a daunting and uncertain profession.</p>
+  
+                <p style="font-family: 'Times New Roman';font-size: large" class="margin-top-15" align="justify">It's important for us, as a society, to recognize and appreciate the efforts of our farmers. They deserve our respect, support, and gratitude for their tireless work.
+                   By supporting our farmers, we can ensure food security for our nation and create a sustainable future for agriculture.</p>
+  
+                <p style="font-family: 'Times New Roman';font-size: large" class="margin-top-15" align="justify">As consumers, we can also play a part by choosing locally grown produce and supporting initiatives that promote fair trade practices. 
+                  Together, we can help create a more equitable and sustainable future for our farmers, ensuring that they continue to thrive and feed our nation for generations to come.
+  
+                </p>
+            </div>
+
+              
+          </div>
+          <div class="col-lg-4 col-md-4 tm-footer-div " >
+            <h3 class="gold-text tm-footer-div-title">Connect With Us</h3>
+            <div style="font-family: 'Times New Roman';font-size: large">
+              <!-- Simran -->
+            Rimmalapudi Rajesh &nbsp;
+            <a href="https://www.linkedin.com/in/rajesh142" target="_blank" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/RimmalapudiRajesh" target="_blank" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <!-- Mehak -->
+          <br><br>Rankela Sai Sri Harsha &nbsp;
+            <a href="https://www.linkedin.com/in/saisriharsha2005"  target="_blank" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/saisriharsha2003" target="_blank" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <br><br>Busi Joseph &nbsp;
+            <a href="https://www.linkedin.com/in/busi-joseph-37a64a20b" target="_blank" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/busijoseph826" target="_blank" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <br><br>Varalakshmiah Duggineni &nbsp;
+            <a href="https://www.linkedin.com/in/varalakshmaiahduggineni" target="_blank" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Varalakshmaiah28" target="_blank" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container">
+        <div class="row tm-copyright">
+          <p class="col-lg-12 small copyright-text text-center">Copyright &copy; 2024 Rajesh, Harsha, Joseph & Varalakshmiah</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+{% endblock %}

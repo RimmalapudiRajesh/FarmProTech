@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<li><a href="index.html">Home</a></li>
+<li><a href="CropRecommendation.html">Crop</a></li>
+<li><a href="FertilizerRecommendation.html">Fertilizer</a></li>
+<li><a href="PesticideRecommendation.html" class="active">Pesticide</a></li>
+{% endblock %}
+
+
+{% block body %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.0/toastify.min.js"></script>
+
+<script>
+  function updateFileName() {
+    const fileInput = document.getElementById('file-input');
+    const fileNameSpan = document.getElementById('file-name');
+
+    if (fileInput.files.length > 0) {
+      fileNameSpan.innerText = `${fileInput.files[0].name}`;
+    } else {
+      fileNameSpan.innerText = '';
+    }
+  }
+
+  function submitForm() {
+    const fileInput = document.getElementById('file-input');
+
+    if (fileInput.files.length === 0) {
+      showToast('Please upload an image first.');
+      return false; 
+    }
+
+    showloading(); 
+
+    return true; 
+  }
+
+  function showToast(message) {
+    Toastify({
+      text: message,
+      duration: 3000, 
+      close: true,
+      gravity: 'top',
+      position: 'right', 
+      className: 'custom-toast',
+    }).showToast();
+  }
+</script>
+
+<br /><br />
+<h2 class="gold-text" style="text-align: center;color: #c79c60; margin: 0px;font-family: 'Times New Roman'; font-size: 35px;">
+  <br>
+  <b class="typing-animation2">Pesticide Recommendation Tool</b>
+</h2>
+
+<div class="tm-welcome-content1" >
+  <p style="font-family: 'Times New Roman'; font-size: 17px">Our Pesticide Recommendation Tool is designed to help you select the 
+    most effective pesticide for your pest problem. Simply upload a clear picture showing the pest you are dealing with, and our tool
+     will recommend the best pesticide for the job.</p>
+  <p style="font-family: 'Times New Roman'; font-size: 17px">
+    By providing a visual of the pest, our tool can analyze the type of pest and its severity, enabling us to suggest the most 
+    appropriate pesticide for effective pest control.
+  </p>
+  <p style="font-family: 'Times New Roman'; font-size: 17px">
+    Using the Pesticide Recommendation Tool can help you tackle pest infestations efficiently and protect your crops from damage. 
+    Whether you're dealing with insects, fungi, or other pests, our tool can provide you with targeted recommendations to address 
+    your specific pest control needs
+  </p>
+</div>
+<br />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<div class="file-upload" >
+  <section>
+    
+    <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="return submitForm()">
+      <div class="row" style="padding-left: 678px;">
+        <div class="col-md-1" style="width: 250px;">
+          <label for="file-input" class="file-input-label" >
+            <i class="fas fa-cloud-upload-alt"></i> Upload File
+          </label>
+          <input id="file-input" type="file" accept=".jpg, .jpeg, .png" class="upload" name="image" onchange=updateFileName() />
+        </div>
+        <div class="col-md-1">
+          <span id="file-name" class="file-name" style=" width:800px; "></span>
+  
+        </div>
+      </div>
+      <div class="row" style="padding-left: 715px; padding-top: 20px; font-weight: bold; ">
+        <input type="submit"  value="Predict" class="predict" style="align-self: center;">
+
+      </div>
+    </form>
+    
+  </section>
+</div>  
+
+{% endblock %}
